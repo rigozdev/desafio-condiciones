@@ -16,3 +16,26 @@ imgGatito.addEventListener('click',()=>{
         imgGatito.style.border='';
     }
 });
+
+
+const sticker1 = document.querySelector('#sticker1');
+const sticker2 = document.querySelector('#sticker2');
+const sticker3 = document.querySelector('#sticker3');
+const recuento = document.querySelector('#recuentoSticker');
+const mensaje = document.querySelector('#mensaje');
+
+
+
+recuento.addEventListener('click', ()=>{
+    const total = parseInt(sticker1.value) + parseInt(sticker2.value) + parseInt(sticker3.value);
+    
+    if(total <= 10){
+        mensaje.style.color='green';
+        mensaje.textContent =`Llevas ${total} stickers`;
+        console.log(total);
+    } else {
+        mensaje.style.color='red';
+        mensaje.textContent = `Llevas demasiados stickers`;
+        console.log(total);
+    }
+});
