@@ -1,0 +1,21 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.main-container{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    height: 800px;
+    border: 1px solid black;
+
+}
+
+.div-container{
+    display: flex;
+    flex-direction: column;
+}
+
+img{
+    border: 1px solid black;
+}
