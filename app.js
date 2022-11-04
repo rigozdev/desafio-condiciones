@@ -1,5 +1,5 @@
+//! variables desafio 1
 const imgGatito = document.querySelector('#imgGatito');
-
 //* se asigna el valor falso (por defecto) a la variable border
 const border = false;
 
@@ -17,7 +17,7 @@ imgGatito.addEventListener('click',()=>{
     }
 });
 
-
+//! variables desafio 2
 const sticker1 = document.querySelector('#sticker1');
 const sticker2 = document.querySelector('#sticker2');
 const sticker3 = document.querySelector('#sticker3');
@@ -37,5 +37,30 @@ recuento.addEventListener('click', ()=>{
         mensaje.style.color='red';
         mensaje.textContent = `Llevas demasiados stickers`;
         console.log(total);
+    }
+});
+
+
+//! variables desafio 3
+const dbPassword1 = 911;
+const dbPassword2 = 714;
+const primerNumero = document.querySelector('#firstNumber');
+const segundoNumero = document.querySelector('#secondNumber');
+const tercerNumero = document.querySelector('#thirdNumber');
+const ingresoClave = document.querySelector('#ingresoClave');
+const mensajeClave = document.querySelector('#mensajeClave')
+
+ingresoClave.addEventListener('click', ()=>{
+    let pass = primerNumero.value + segundoNumero.value + tercerNumero.value;
+    console.log(parseInt(pass));
+
+    if(parseInt(pass) === dbPassword1){
+        mensajeClave.textContent = 'Password1 Correcto';
+    }else{
+        if(parseInt(pass)===dbPassword2){
+            mensajeClave.textContent = 'Password2 Correcto';
+        }else{
+            mensajeClave.textContent = 'Password Incorrecto';
+        } 
     }
 });
