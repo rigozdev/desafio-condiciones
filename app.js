@@ -55,13 +55,22 @@ ingresoClave.addEventListener('click', ()=>{
     let pass = primerNumero.value + segundoNumero.value + tercerNumero.value;
     console.log(parseInt(pass));
 
+    // if(parseInt(pass) === dbPassword1){
+    //     mensajeClave.textContent = 'Password1 Correcto';
+    // }else{
+    //     if(parseInt(pass)===dbPassword2){
+    //         mensajeClave.textContent = 'Password2 Correcto';
+    //     }else{
+    //         mensajeClave.textContent = `Password Incorrecto, ha ingresado ${parseInt(pass)}`;
+    //     } 
+    // }
+
     if(parseInt(pass) === dbPassword1){
         mensajeClave.textContent = 'Password1 Correcto';
+    }else if(parseInt(pass)===dbPassword2){
+        mensajeClave.textContent = 'Password2 Correcto';
     }else{
-        if(parseInt(pass)===dbPassword2){
-            mensajeClave.textContent = 'Password2 Correcto';
-        }else{
-            mensajeClave.textContent = 'Password Incorrecto';
-        } 
-    }
+        mensajeClave.textContent = `Password Incorrecto, ha ingresado ${parseInt(pass)}`;
+    }     
+    
 });
