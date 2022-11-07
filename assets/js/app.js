@@ -14,7 +14,7 @@ imgGatito.addEventListener('click',()=>{
 
     }else{
         border=false;
-        imgGatito.style.border='';
+        imgGatito.style.border='none';
     }
 });
 
