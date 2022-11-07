@@ -53,8 +53,10 @@ recuento.addEventListener('click', ()=>{
 
 
 //! variables desafio 3
+//* variables estaticas o duras de contraseñas
 const dbPassword1 = 911;
 const dbPassword2 = 714;
+
 const primerNumero = document.querySelector('#firstNumber');
 const segundoNumero = document.querySelector('#secondNumber');
 const tercerNumero = document.querySelector('#thirdNumber');
@@ -62,18 +64,14 @@ const ingresoClave = document.querySelector('#ingresoClave');
 const mensajeClave = document.querySelector('#mensajeClave')
 
 ingresoClave.addEventListener('click', ()=>{
-    let pass = primerNumero.value + segundoNumero.value + tercerNumero.value;
-    console.log(parseInt(pass));
 
-    // if(parseInt(pass) === dbPassword1){
-    //     mensajeClave.textContent = 'Password1 Correcto';
-    // }else{
-    //     if(parseInt(pass)===dbPassword2){
-    //         mensajeClave.textContent = 'Password2 Correcto';
-    //     }else{
-    //         mensajeClave.textContent = `Password Incorrecto, ha ingresado ${parseInt(pass)}`;
-    //     } 
-    // }
+    const numero1 = parseInt(primerNumero.value);
+    const numero2 = parseInt(segundoNumero.value);
+    const numero3 = parseInt(tercerNumero.value);
+
+    let pass = numero1 + '' +numero2+ ''+ numero3;
+    console.log('Valor ingresado');
+    console.log(pass);
 
     if(parseInt(pass) === dbPassword1){
         mensajeClave.textContent = 'Password1 Correcto';
