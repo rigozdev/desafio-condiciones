@@ -11,12 +11,17 @@ imgGatito.addEventListener('click',()=>{
         border=true;
         imgGatito.style.border='1px red solid';
         console.log(border);
+        console.log('Se aplica borde');
 
     }else{
         border=false;
         imgGatito.style.border='none';
+        console.log(border);
+        console.log('Se quita borde');
     }
 });
+
+
 
 //! variables desafio 2
 const sticker1 = document.querySelector('#sticker1');
@@ -26,18 +31,23 @@ const recuento = document.querySelector('#recuentoSticker');
 const mensaje = document.querySelector('#mensaje');
 
 
-
 recuento.addEventListener('click', ()=>{
-    const total = parseInt(sticker1.value) + parseInt(sticker2.value) + parseInt(sticker3.value);
+    const stickerUno = parseInt(sticker1.value);
+    const stickerDos = parseInt(sticker2.value);
+    const stickerTres = parseInt(sticker3.value);
+
+
+    const totalStickers = stickerUno + stickerDos + stickerTres;
+    console.log(totalStickers);
     
-    if(total <= 10){
+    if(totalStickers <= 10){
         mensaje.style.color='green';
-        mensaje.textContent =`Llevas ${total} stickers`;
-        console.log(total);
+        mensaje.textContent =`Llevas ${totalStickers} stickers`;
+        console.log(totalStickers);
     } else {
         mensaje.style.color='red';
         mensaje.textContent = `Llevas demasiados stickers`;
-        console.log(total);
+        console.log(totalStickers);
     }
 });
 
