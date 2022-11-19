@@ -90,11 +90,14 @@ ingresoClave.addEventListener('click', ()=>{
     
     /* se compara el valor ingresado con las pass designadas */
     if(pass === dbPassword1){
-        mensajeClave.textContent = `Password 1 Correcto`;        
+        mensajeClave.textContent = `Password 1 Correcto`;     
+        mensajeClave.style.color = 'green';   
     }else if(parseInt(pass)===dbPassword2){
         mensajeClave.textContent = `Password 2 Correcto`;
+        mensajeClave.style.color = 'green';   
     }else{
         mensajeClave.textContent = `Password Incorrecto, Intente Nuevamente`;
+        mensajeClave.style.color = 'red';   
     }   
     
 });
