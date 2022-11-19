@@ -31,24 +31,55 @@ const recuento = document.querySelector('#recuentoSticker');
 const mensaje = document.querySelector('#mensaje');
 
 
+
 recuento.addEventListener('click', ()=>{
+    
     const stickerUno = parseInt(sticker1.value);
     const stickerDos = parseInt(sticker2.value);
     const stickerTres = parseInt(sticker3.value);
 
 
+    console.log('sticker1: ' + stickerUno);
+    console.log('sticker2: ' + stickerDos);
+    console.log('sticker3: ' + stickerTres);
+
+
     const totalStickers = stickerUno + stickerDos + stickerTres;
-    console.log(totalStickers);
+    console.log('Total stickers: '+totalStickers);
     
-    if(totalStickers <= 10){
-        mensaje.style.color='green';
-        mensaje.textContent =`Llevas ${totalStickers} stickers`;
-        console.log(totalStickers);
-    } else {
+    if (isNaN(totalStickers)) {
         mensaje.style.color='red';
-        mensaje.textContent = `Llevas demasiados stickers`;
-        console.log(totalStickers);
+        mensaje.textContent = `Ingrese números en los stickers`;
+        return;
+    }else{
+        if (stickerUno < 0 || stickerDos < 0 || stickerTres < 0 ) {
+            mensaje.style.color='red';
+            mensaje.textContent = `Ingrese valores validos`;
+        }else{
+            if(totalStickers ==0){
+
+                mensaje.style.color='red';
+                mensaje.textContent = `No puedes llevar 0 stickers`;
+                console.log(totalStickers);                
+
+            } else if(totalStickers <= 10){
+
+                mensaje.style.color='green';
+                mensaje.textContent =`Llevas ${totalStickers} stickers`;
+                console.log(totalStickers);
+
+
+            } else {
+                mensaje.style.color='red';
+                mensaje.textContent = `Llevas demasiados stickers`;
+                console.log(totalStickers);
+            }        
+        }
+        
     }
+    
+
+    
 });
 
 
@@ -73,12 +104,14 @@ ingresoClave.addEventListener('click', ()=>{
     console.log('Valor ingresado');
     console.log(pass);
 
+
+    
     if(parseInt(pass) === dbPassword1){
-        mensajeClave.textContent = 'Password1 Correcto';
+        mensajeClave.textContent = `Password 1 ingresada correctamente`;        
     }else if(parseInt(pass)===dbPassword2){
-        mensajeClave.textContent = 'Password2 Correcto';
+        mensajeClave.textContent = 'Password 2 ingresada correctamente';
     }else{
-        mensajeClave.textContent = `Password Incorrecto, ha ingresado ${parseInt(pass)}`;
-    }     
+        mensajeClave.textContent = `Password incorrecto, ha ingresado ${parseInt(pass)}`;
+    }   
     
 });

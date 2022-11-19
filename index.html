@@ -8,27 +8,32 @@
     <title>Document</title>
 </head>
 <body>
-    <img id="imgGatito" src="http://placekitten.com/320/320" alt="gatito">
-
-
-
-    <hr>
-    <hr>
-
+    <div class="title-ex1">
+        <h3>Da click a la siguiente imagen y ve lo que sucede!😲 </h3>
+        <img id="imgGatito" src="http://placekitten.com/320/320" alt="gatito">
+    </div>
+    
     <br>
+    <br>
+    <hr>
+
+    <div class="title-ex2">
+        <h3>Ingrese un número para cada sticker que desee llevar😊</h3>
+    </div>
     <section class="main-container">
+
         <!-- !Sticker 1 -->
         <div class="div-container">
             <img src="assets/imgs/adidas-logo.png" alt="adidas-lgo">
             <br>
-            <input type="number" name="" id="sticker1" min="1">
+            <input type="number" name="" id="sticker1" min="1" placeholder="1">
         </div>
 
         <!-- !Sticker 2 -->
         <div class="div-container">
             <img src="assets/imgs/converse-logo.jpg" alt="converse-logo">
             <br>
-            <input type="number" name="" id="sticker2" min="1">
+            <input type="number" name="" id="sticker2" min="1" placeholder="2">
             <br>
             <p id="mensaje"></p>
             <button id="recuentoSticker">Verificar</button>
@@ -38,18 +43,23 @@
         <div class="div-container">
             <img src="assets/imgs/vans-logo.png" alt="vans-logo">
             <br>
-            <input type="number" name="" id="sticker3" min="1">
+            <input type="number" name="sticker1" id="sticker3" min="1" placeholder="3">
         </div>
         
         
     </section>
 
     <hr>
+
+    <div class="title-ex2">
+        <h3>Ingresa la clave (y combinación) correspondiente! </h3>
+    </div>
+
     <section class="desafio3-container">
         <div class="container3">
             <h3>Ingresa el Password</h3>
             <div class="select-container">
-                <select name="" id="firstNumber">
+                <select name="number1" title="number1" id="firstNumber">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -60,7 +70,7 @@
                     <option value="8">8</option>
                     <option value="9">9</option>
                 </select>
-                <select name="" id="secondNumber">
+                <select name="number2" title="number2"  id="secondNumber">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -71,7 +81,7 @@
                     <option value="8">8</option>
                     <option value="9">9</option>
                 </select>
-                <select name="" id="thirdNumber">
+                <select name="number3" title="number3"  id="thirdNumber">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
